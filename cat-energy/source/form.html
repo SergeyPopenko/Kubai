@@ -33,84 +33,58 @@
       </header>
     </div>
     <main class="page-main">
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <div class="promo__img">
-            <img src="img/promo-img.png" alt="Упаковка питания Cat Energy">
-          </div>
-          <a class="promo__button button" href="form.html">Подобрать программу</a>
-        </div>
+      <section class="program-selection">
+        <h2 class="program-selection__title">Подбор программы</h2>
+        <p class="program-selection__info">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="program-selection__form form" action method="post">
+          <fieldset class="form__wrap">
+            <label class=" form__data" for="name">Имя:*</label>
+            <input class=" form__data-value" type="text" name="name" id="name" placeholder="Барсик"><br>
+            <label class=" form__data" for="weight">Вес (кг):*</label>
+            <input class=" form__data-value" type="number" min="1" max="30" name="weight" id="weight" placeholder="7"><br>
+            <label class=" form__data" for="age">Возраст (лет):</label>
+            <input class=" form__data-value" min="1" max="30" name="age" id="age" placeholder="7">
+          </fieldset>
+          <fieldset class="form__wrap">
+            <label for="weightLoss">
+              <input type="radio" name="choice" id="weightLoss">
+              <span>Похудение</span>
+            </label><br>
+            <label for="weightIncrease">
+              <input type="radio" name="choice" id="weightIncrease">
+              <span>Набор массы</span>
+            </label><br>
+            <label for="advice">
+              <input type="radio" name="choice" id="advice">
+              <span>Не знаю (Нужен ваш совет)</span>
+            </label>
+          </fieldset>
+          <fieldset class="form__wrap">
+            <legend>Контактные данные (владельца кота)</legend>
+            <label for="userEmail">E-mail:*</label>
+            <input type="email" name="user-email" id="userEmail" placeholder="кuklachev@gmail.com"><br>
+            <label for="userPhone">Телефон:*</label>
+            <input type="tel" name="user-phone" id="userPhone" maxlength="19" placeholder="8 (960) 900-60-90">
+          </fieldset>
+          <fieldset class="form__wrap">
+            <legend>Комментарий</legend>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="form__wrap">
+            <legend>Дополнительно</legend>
+            <input type="checkbox" name="sweetener" id="sweetener">
+            <label for="sweetener">Cахарозаменитель</label>
+            <input type="checkbox" name="milk" id="milk">
+            <label for="milk">Молоко</label>
+            <input type="checkbox" name="water" id="water">
+            <label for="water">Питьевая вода</label>
+            <input type="checkbox" name="vitamins" id="vitamins">
+            <label for="vitamins">Витамины</label>
+          </fieldset>
+          <button class="form__button button" type="submit">Oтправить заявку</button>
+          <p class="form__info">* — Обязательные поля</p>
+        </form>
       </section>
-      <div class="container">
-        <section class="prime">
-          <h2 class="viually-hidden">Программы питания Cat Energy</h2>
-          <div class="prime__inner">
-            <div class="prime__content prime__content--slim">
-              <h3 class="prime__title">Похудение</h3>
-              <p class="prime__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            </div>
-            <a class="prime__link" href="catalog.html">Каталог slim</a>
-          </div>
-          <div class="prime__inner">
-            <div class="prime__content prime__content--pro">
-              <h3 class="prime__title">Набор массы</h3>
-              <p class="prime__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            </div>
-            <a class="prime__link" href="catalog.html">Каталог pro</a>
-          </div>
-        </section>
-        <section class="advantages">
-          <h2 class="advantages__title">Как это работает</h2>
-          <ol class="advantages__list">
-            <li class="advantages__item advantages__item--leaf">
-              <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
-            </li>
-            <li class="advantages__item advantages__item--tub">
-              <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            </li>
-            <li class="advantages__item advantages__item--eat">
-              <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            </li>
-            <li class="advantages__item advantages__item--alarm">
-              <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ol>
-        </section>
-        <section class="example">
-          <h2 class="example__title">Живой пример</h2>
-          <div class="example__wrapper">
-            <div class="example__inner">
-              <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-              <dl class="example__list">
-                <dt class="example__term">5 кг</dt>
-                <dd class="example__definition">Снижение веса</dd>
-                <dt class="example__term">60 дней</dt>
-                <dd class="example__definition">Затрачено времени</dd>
-              </dl>
-              <p class="example__expenses">Затраты на питание: <span>15 000 руб.</span></p>
-              <div class="example__slider slider">
-                <input type="radio" name="toggle" id="toggle-befor" checked>
-                <input type="radio" name="toggle" id="toggle-after">
-                <div class="slider__image slider__image--befor">
-                  <img src="img/cat-fat.png" alt="Кот был - толстый">
-                </div>
-                <div class="slider__image slider__image--after">
-                  <img src="img/cat-skinny.png" alt="Кот стал - худой">
-                </div>
-                <div class="example__slider-switcher">
-                  <label for="toggle-befor">Было</label>
-                  <div class="example__slider-toggle">
-                    <span class="viually-hidden"></span>
-                  </div>
-                  <label for="toggle-after">Стало</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
