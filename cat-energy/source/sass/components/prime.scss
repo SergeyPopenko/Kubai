@@ -23,6 +23,8 @@
   margin-bottom: 20px;
   padding: 30px 20px 18px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &::after {
     content: '';
@@ -53,11 +55,12 @@
 
   @media(min-width: 768px) {
     padding: 77px 316px 52px 53px;
+    margin-bottom: 45px;
   }
 
   @media(min-width: 1200px) {
     padding: 77px 51px 55px 52px;
-    margin-bottom: 29px;
+    margin-bottom: 71px;
     height: 100%;
   }
 }
@@ -139,6 +142,7 @@
   text-transform: uppercase;
   color: #000000;
   position: relative;
+  margin-top: auto;
 
   &:active {
     opacity: 0.3;
