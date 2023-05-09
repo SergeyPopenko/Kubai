@@ -61,7 +61,7 @@
     font-size: 60px;
     line-height: 60px;
     padding-top: 62px;
-    padding-left: 87px;
+    padding-left: 117px;
     text-align: left;
   }
 }
@@ -78,7 +78,7 @@
     font-size: 20px;
     line-height: 20px;
     text-align: left;
-    padding: 21px 60px 49px 89px;
+    padding: 21px 60px 63px 119px;
   }
 }
 
@@ -92,9 +92,7 @@
   @media(min-width: 768px) {
     width: 709px;
     z-index: -1;
-    left: 7px;
-    top: 263px;
-    transform: none;
+    top: 187%;
   }
 
   @media(min-width: 1200px) {
@@ -118,7 +116,7 @@
 
   @media(min-width: 768px) {
     position: static;
-    margin-left: 91px;
+    margin-left: 120px;
     padding: 14px 26px;
   }
 
