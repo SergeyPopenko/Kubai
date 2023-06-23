@@ -10,10 +10,16 @@
   padding: 10px 20px 17px;
   background-color: #ffffff;
   z-index: 6;
+  border-bottom: 1px solid #EBEBEB;
+
+  .page-header--home & {
+    border-bottom: none;
+  }
 
   @media(min-width: 768px) {
     padding: 24px 0 0 0;
     position: relative;
+    border-bottom: none;
   }
 
   @media(min-width: 1200px) {
