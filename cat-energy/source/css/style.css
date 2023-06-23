@@ -14,7 +14,6 @@
 
 body {
   font-family: "Oswald", sans-serif;
-  font-family: "Roboto", sans-serif;
   margin: 0;
   position: relative;
 }
@@ -239,6 +238,9 @@ p {
   text-transform: uppercase;
   color: #000000;
 }
+.site-list__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
 .site-list__link:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -250,14 +252,16 @@ p {
 }
 @media (min-width: 1200px) {
   .site-list__link {
-    color: #ffffff;
     font-weight: 400;
     line-height: 30px;
   }
-  .site-list__link:hover {
+  .site-list--home .site-list__link {
+    color: #ffffff;
+  }
+  .site-list--home .site-list__link:hover {
     color: rgba(255, 255, 255, 0.6);
   }
-  .site-list__link:active {
+  .site-list--home .site-list__link:active {
     color: rgba(255, 255, 255, 0.3);
   }
 }
@@ -278,7 +282,7 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .site-list__link--active::after {
+  .site-list--home .site-list__link--active::after {
     background-color: #ffffff;
   }
 }
@@ -1212,6 +1216,10 @@ p {
   }
 }
 
+.page-footer {
+  background-color: var(--basic_grey);
+}
+
 .page-footer__contacts {
   position: relative;
 }
@@ -1243,6 +1251,11 @@ p {
 @media (min-width: 768px) {
   .contacts__map {
     height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts__map {
+    margin-top: 0;
   }
 }
 
