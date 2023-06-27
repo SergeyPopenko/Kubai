@@ -86,4 +86,12 @@ p {
   text-transform: uppercase;
   text-align: center;
   font: normal 400 14px/18px "Oswald";
+
+  &:hover {
+    background-color: var(--basic_green-hover);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

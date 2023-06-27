@@ -44,12 +44,12 @@
 }
 
 .contacts .container {
-  background-color: #FFFFFF;
+  background-color: var(--basic_grey);
   padding-top: 26px;
   padding-bottom: 26px;
   display: flex;
   position: absolute;
-  top: -112px;
+  top: -92px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -64,6 +64,7 @@
     width: 565px;
     top: 95px;
     left: 110px;
+    background-color: #FFFFFF;
   }
 }
 
