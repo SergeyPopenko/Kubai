@@ -121,7 +121,7 @@
   justify-content: center;
   margin: 0 16px;
   width: 50%;
-  border: 1px solid #CDCDCD;
+  border: 1px solid var(--special-grey);
   border-radius: 3px;
   position: relative;
 
@@ -249,7 +249,7 @@
     content: '';
     width: 86px;
     height: 14px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid var(--special-grey);
     border-radius: 6px;
     background-color: #ffffff;
     left: 50%;
