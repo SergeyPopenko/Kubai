@@ -1,7 +1,7 @@
 {
-  "name": "{{projectName}}",
+  "name": "cat-energy",
   "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "description": "Личный проект «cat-energy»",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
@@ -39,5 +39,10 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "node-normalize-scss": "^8.1.2",
+    "normalize-scss": "^7.0.1",
+    "normalize.scss": "^0.1.0"
+  }
 }

@@ -1,0 +1,255 @@
+.additional-product {
+  margin-top: 25px;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.additional-product__title-wrap {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--basic_green);
+    top: 50%;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.additional-product__title {
+  @include font-title($fontSize: 24px,
+  $lineHeight: 24px);
+  width: 268px;
+  background-color: var(--basic_white);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.additional-product__wrap {
+  border-top: 1px solid var(--special-grey);
+  width: 100%;
+}
+
+.additional-product-card {
+  border-bottom: 1px solid var(--special-grey);
+  padding: 13px 0 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__title {
+  @include font-title($fontSize: 16px,
+  $lineHeight: 16px,
+  $color: var(--special_dark-grey-2));
+  text-transform: uppercase;
+  padding-bottom: 13px;
+}
+
+.product-card__table {
+  width: 100%;
+}
+
+.product-card__table-name {
+  @include font-main(
+  $color: var(--special_dark-grey));
+}
+
+.product-card__table-name--value {
+  text-align: end;
+  width: 20%;
+}
+
+.product-card__button {
+  // @include button();
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+}
+
+.additional-product__action {
+  position: relative;
+  margin-bottom: 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/action-mobile-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 289px;
+    z-index: -1;
+  }
+}
+
+.additional-product__action-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px 43px;
+
+  svg {
+    margin: 59px 0 48px;
+  }
+}
+
+.additional-product__action-info {
+  @include font-main($fontSize: 16px,
+  $lineHeight: 20px,
+  $color: var(--basic_white));
+  text-align: center;
+}
+
+@media(min-width: $media-tablet) {
+  .additional-product {
+    margin-top: 0;
+  }
+
+  .additional-product__title {
+    @include font-title($fontSize:36px);
+    width: 411px;
+    margin-left: 30px;
+    margin-bottom: 80px;
+  }
+
+  .additional-product__wrap {
+    margin-bottom: 69px;
+  }
+
+  .additional-product-card {
+    padding: 26px 38px 28px;
+    border-left: 1px solid var(--special-grey);
+    border-right: 1px solid var(--special-grey);
+  }
+
+  .product-card__wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-card__title {
+    @include font-title($fontSize: 20px,
+    $lineHeight: 20px);
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  .product-card__table {
+    width: 50%;
+    text-align: end;
+  }
+
+  .product-card__table-name {
+    @include font-main($fontSize: 16px,
+    $lineHeight: 20px);
+  }
+
+  .product-card__button {
+    margin-top: 23px;
+  }
+
+  .additional-product__action::after {
+    height: 200px;
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/action-tablet.jpg);
+  }
+
+  .additional-product__action-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 57px 124px 63px 77px;
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  .additional-product__action-info {
+    text-align: start;
+    width: 30%;
+  }
+}
+
+@media(min-width: $media-desctop) {
+  .additional-product {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .additional-product__title {
+    width: 413px;
+    margin-left: 70px;
+    margin-bottom: 81px;
+  }
+
+  .additional-product__wrap {
+    width: 74%;
+    margin-bottom: 86px;
+  }
+
+  .additional-product-card {
+    border-left: none;
+    border-right: none;
+    padding: 15px 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-card__wrap {
+    width: 71%;
+  }
+
+  .product-card__table-name {
+    text-align: start;
+    padding-left: 10px;
+  }
+
+  .product-card__button {
+    width: 29%;
+    margin-left: 38px;
+    margin-top: 0;
+  }
+
+  .additional-product__action {
+    width: 21%;
+    margin-bottom: 0;
+
+    &::after {
+      height: 289px;
+      background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/action-mobile-desktop.jpg);
+    }
+  }
+
+  .additional-product__action-wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 42px;
+    svg {
+      margin: 56px 0 47px;
+    }
+  }
+
+  .additional-product__action-info {
+    width: 100%;
+    text-align: center;
+  }
+}
