@@ -17,8 +17,51 @@
     max-width: 100%;
     height: 320px;
   }
+}
 
-  @media(min-width: 768px) {
+.promo__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.promo__title {
+  @include font-title ($fontSize: 36px,
+  $lineHeight: 36px,
+  $color: var(--basic_white));
+  text-align: center;
+  padding: 27px 35px 20px;
+}
+
+.promo__slogan {
+  @include font-title ($color: var(--basic_white));
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 60px 164px;
+}
+
+.promo__img {
+  position: absolute;
+  width: 280px;
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%, -50%);
+}
+
+.promo__button {
+  @include font-title ($lineHeight: 18px,
+  $color: var(--basic_white));
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: -206px;
+  background-color: var(--basic_green);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 44px;
+}
+
+@media(min-width: $media-tablet) {
+  .promo {
     margin-bottom: 580px;
 
     &::after {
@@ -26,7 +69,36 @@
     }
   }
 
-  @media(min-width: 1200px) {
+  .promo__title {
+        @include font-title ($fontSize: 60px,
+    $lineHeight: 60px);
+    padding-top: 62px;
+    padding-left: 117px;
+    text-align: left;
+  }
+
+  .promo__slogan {
+    @include font-title ($fontSize: 20px,
+    $lineHeight: 20px);
+    text-align: left;
+    padding: 21px 60px 63px 119px;
+  }
+
+  .promo__img {
+    width: 709px;
+    z-index: -1;
+    top: 187%;
+  }
+
+  .promo__button {
+    position: static;
+    margin-left: 120px;
+    padding: 14px 26px;
+  }
+}
+
+@media(min-width: $media-desctop) {
+  .promo {
     margin-bottom: 284px;
 
     &::after {
@@ -39,88 +111,18 @@
       height: 694px;
     }
   }
-}
 
-.promo__wrapper {
-  position: relative;
-  z-index: 1;
-
-  @media(min-width: 1200px) {
+  .promo__wrapper {
     width: 50%;
   }
-}
 
-.promo__title {
-  font: normal 400 36px/36px 'Oswald';
-  color: #ffffff;
-  text-align: center;
-  padding: 27px 35px 20px;
-
-  @media(min-width: 768px) {
-    color: #000000;
-    font-size: 60px;
-    line-height: 60px;
-    padding-top: 62px;
-    padding-left: 117px;
-    text-align: left;
-  }
-}
-
-.promo__slogan {
-  font: normal 400 14px/14px 'Oswald';
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-  padding: 5px 60px 164px;
-
-  @media(min-width: 768px) {
-    color: #000000;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: left;
-    padding: 21px 60px 63px 119px;
-  }
-}
-
-.promo__img {
-  position: absolute;
-  width: 280px;
-  left: 50%;
-  top: 110%;
-  transform: translate(-50%, -50%);
-
-  @media(min-width: 768px) {
-    width: 709px;
-    z-index: -1;
-    top: 187%;
-  }
-
-  @media(min-width: 1200px) {
+  .promo__img {
     width: 552px;
     top: 100%;
     left: 110%;
   }
-}
 
-.promo__button {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: -206px;
-  background-color: var(--basic_green);
-  color: #ffffff;
-  font: normal 400 14px/18px 'Oswald';
-  text-transform: uppercase;
-  text-align: center;
-  padding: 7px 44px;
-
-  @media(min-width: 768px) {
-    position: static;
-    margin-left: 120px;
-    padding: 14px 26px;
-  }
-
-  @media(min-width: 1200px) {
+  .promo__button {
     &:hover {
       background-color: var(--basic_green-hover);
     }

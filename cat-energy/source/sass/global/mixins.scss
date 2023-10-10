@@ -1,0 +1,48 @@
+// @mixin font($fontFamily, $fontStyle, $fontSize, $fonfWeight, $lineHeight, $color) {
+//   font-family: $fontFamily;
+//   font-size: $fontSize;
+//   font-weight: $fonfWeight;
+//   line-height: $lineHeight;
+//   color: $color;
+// }
+
+@mixin font-title(
+  $fontFamily: $font-family-oswald,
+  $fontWeight: 400,
+  $fontStyle: normal,
+  $fontSize: 14px,
+  $lineHeight: 14px,
+  $color: var(--basic_black)) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+@mixin font-main (
+  $fontFamily: $font-family-arial,
+  $fontWeight: 400,
+  $fontSize: 14px,
+  $lineHeight: 18px,
+  $color: var(--special_dark-grey)) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+// @mixin button (
+// $display: inline-block,
+// $backgroundColor: var(--basic_green),
+// $color: var(--basic_white),
+// $textTransform: uppercase,
+// $textAlign: center) {
+//   display: $display;
+//   background-color: $backgroundColor;
+//   color: $color;
+//   text-transform: $textTransform;
+//   text-align: $textAlign;
+// }

@@ -7,7 +7,8 @@
 
 body {
   // font-family: 'Oswald', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family-arial;
+  font-style: normal;
   margin: 0;
   position: relative;
 }
@@ -35,8 +36,11 @@ a {
 
 h1,
 h2,
-h3 {
-  margin: 0rem;
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 p {
@@ -66,31 +70,19 @@ fieldset {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-
-  @media(min-width: 768px) {
-    padding: 0 30px;
-  }
-
-  @media(min-width: 1200px) {
-    padding: 0 110px;
-  }
 }
 
 .page-main {
   padding-top: 65px;
-
-  @media(min-width: 768px) {
-    padding-top: 0;
-  }
 }
 
 .button {
+  @include font-title ($lineHeight: 18px,
+  $color: var(--basic_white));
   display: inline-block;
   background-color: var(--basic_green);
-  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  font: normal 400 14px/18px "Oswald";
 
   &:hover {
     background-color: var(--basic_green-hover);
@@ -98,5 +90,21 @@ fieldset {
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media(min-width: $media-tablet) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .page-main {
+    padding-top: 0;
+  }
+}
+
+@media(min-width: $media-desctop) {
+  .container {
+    padding: 0 110px;
   }
 }

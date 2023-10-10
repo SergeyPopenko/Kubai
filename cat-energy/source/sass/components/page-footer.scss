@@ -9,7 +9,8 @@
 .contacts__map {
   overflow: hidden;
   position: relative;
-  margin-top: 124px;
+  top: -20px;
+  margin-top: 112px;
   height: 362px;
 
   &::after {
@@ -49,7 +50,7 @@
   padding-bottom: 26px;
   display: flex;
   position: absolute;
-  top: -92px;
+  top: -112px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -64,20 +65,22 @@
     width: 565px;
     top: 95px;
     left: 110px;
-    background-color: #FFFFFF;
+    background-color: var(--basic_white);
   }
 }
 
 .contacts__text {
-  font: normal 400 16px/20px 'Oswald';
-  color: #111111;
+  @include font-title ($fontSize: 16px,
+  $lineHeight: 20px,
+  $color: var(--special_dark));
   text-transform: uppercase;
   margin-right: 2px;
   width: 50%;
 
   @media(min-width: 768px) {
-    font-size: 20px;
-    line-height: 26px;
+    @include font-title ($fontSize: 20px,
+    $lineHeight: 26px,
+    $color: var(--special_dark));
     text-align: left;
     margin-right: 148px;
   }
@@ -88,6 +91,7 @@
 }
 
 .contacts__address {
+  // @include font-main ($lineHeight: 20px);
   font: normal 400 14px/20px 'Arial';
   color: var(--special_dark-grey);
   width: 50%;
@@ -103,13 +107,6 @@
     margin-left: 43px;
   }
 }
-
-
-
-
-
-
-
 
 .page-footer__social .container{
   display: flex;
@@ -234,3 +231,7 @@
     margin-left: 22px;
   }
 }
+
+@media(min-width: $media-tablet) {}
+
+@media(min-width: $media-desctop) {}
